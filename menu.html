@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a table</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="images/icon.png" class="img_logo" alt="Zinnger Logo">
+            <span><a href="index.html">Zinnger</a></span>
+        </div>
+        <ul>
+            <h4 class="totalPrice">Total Price: ₹<span id="totalPrice">0</span></h4>
+            <button id="theme-toggle">Dark Mode</button>
+            <li><a onclick="index()" style="cursor: pointer;">Home</a></li>
+            <li><a onclick="menu()" style="cursor: pointer;">Menu</a></li>
+            <li><a onclick="table()" style="cursor: pointer;">Table</a></li>
+            <li><a onclick="gallery()" style="cursor: pointer;">Gallery</a></li>
+            <li><a onclick="about()" style="cursor: pointer;">About</a></li>
+            <li><a href="tel:123-456-7890">Call Us</a></li>
+
+        </ul>
+    </nav>
+    <div id="mobile">
+        <div class="logo1"><span>Zinnger</span></div>
+        <ul>
+            <button id="theme-toggle">Dark Mode</button>
+            <li><a onclick="index()" style="cursor: pointer;">Home</a></li>
+            <li><a onclick="menu()" style="cursor: pointer;">Menu</a></li>
+            <li><a onclick="table()" style="cursor: pointer;">Table</a></li>
+            <li><a onclick="gallery()" style="cursor: pointer;">Gallery</a></li>
+            <li><a onclick="about()" style="cursor: pointer;">About</a></li>
+            <li><a href="tel:123-456-7890">Call Us</a></li>
+
+        </ul>
+    </div>
+
+
+    <!-- menu -->
+    <div id="menu">
+        <div class="heading">
+            <h1>Menu</h1>
+            <h3>Today's Special</h3><br>
+            <h4><img src="images/menu/veg.png">WE SERVE VEG ONLY</h4>
+        </div>
+
+        <!-- menu cards -->
+
+        <div class="card">
+            <img src="images/menu/pavbhaji.jpg" alt="pavbhaji">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pav bhaji</h5>
+                    <h5 class="price" id="pavbhajiPrice"> ₹129 </h5>
+                </div>
+                <p>Pav bhaji is a spiced mixture of mashed vegetables in a thick gravy served with bread. </p>
+                <button id="pavbhajiButton">Add To Cart</button>
+                <button id="pavbhajiRemoveButton" onclick="adjustCount('pavbhaji', -1)">Remove The Item</button>
+                <h6 class="count" id="pavbhajiCount" hidden>0</h6>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/purichane.jpeg" alt="bhature">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Chane Bhature</h5>
+                    <h5 class="price" id="bhaturePrice"> ₹89 </h5>
+                </div>
+                <p>Enjoy the classic Indian dish Chane bhature, featuring deep-fried bread (bhature) served with a
+                    flavorful
+                    chickpea curry. </p>
+                <button id="bhatureButton">Add To Cart</button>
+                <button id="bhatureRemoveButton" onclick="adjustCount('bhature', -1)">Remove The Item</button>
+                <h6 class="count" id="bhatureCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        
+
+        <div class="card">
+            <img src="images/menu/pannertikka.jpg" alt="panner-tikka">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Panner Tikka</h5>
+                    <h5 class="price" id="panner-tikkaPrice"> ₹199 </h5>
+                </div>
+                <p>Paneer Tikka is an Indian dish made from chunks of paneer/ chhena marinated in spices and grilled
+                    in a tandoor.</p>
+                <button id="panner-tikkaButton">Add To Cart</button>
+                <button id="panner-tikkaRemoveButton" onclick="adjustCount('panner-tikka', -1)">Remove The Item</button>
+                <h6 class="count" id="panner-tikkaCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/sandwitch.jpg" alt="sandwitch">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Sandwitch</h5>
+                    <h5 class="price" id="sandwitchPrice"> ₹119 </h5>
+                </div>
+                <p>Savor a delightful veg sandwich filled with fresh, crisp vegetables and creamy spreads, perfectly
+                    assembled between slices of toasted bread.</p>
+                <button id="sandwitchButton">Add To Cart</button>
+                <button id="sandwitchRemoveButton" onclick="adjustCount('sandwitch', -1)">Remove The Item</button>
+                <h6 class="count" id="sandwitchCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/burger.jpg" alt="burger">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Burger</h5>
+                    <h5 class="price" id="burgerPrice"> ₹149 </h5>
+                </div>
+                <p>A burger is a patty of ground beef grilled and placed between two halves of a bun.</p>
+                <button id="burgerButton">Add To Cart</button>
+                <button id="burgerRemoveButton" onclick="adjustCount('burger', -1)">Remove The Item</button>
+                <h6 class="count" id="burgerCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/fries.jpg" alt="fries">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Fries</h5>
+                    <h5 class="price" id="friesPrice"> ₹99 </h5>
+                </div>
+                <p>Fries are side dish or snack typically made from deep-fried potatoes that have been cut into
+                    various shapes, especially thin strips </p>
+                <button id="friesButton">Add To Cart</button>
+                <button id="friesRemoveButton" onclick="adjustCount('fries', -1)">Remove The Item</button>
+                <h6 class="count" id="friesCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="images/menu/pasta.jpg" alt="pasta">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pasta</h5>
+                    <h5 class="price" id="pastaPrice"> ₹189 </h5>
+                </div>
+                <p>Pasta is a collective name for a category of food made from wheat flour and water.</p>
+                <button id="pastaButton">Add To Cart</button>
+                <button id="pastaRemoveButton" onclick="adjustCount('pasta', -1)">Remove The Item</button>
+                <h6 class="count" id="pastaCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/springroll.jpg" alt="springroll">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Spring Roll</h5>
+                    <h5 class="price" id="springrollPrice"> ₹119 </h5>
+                </div>
+                <p>Experience the delicious fusion of spring rolls filled with savory noodles, offering a delightful
+                    combination of crispy exteriors and soft, flavorful interiors. </p>
+                <button id="springrollButton">Add To Cart</button>
+                <button id="springrollRemoveButton" onclick="adjustCount('springroll', -1)">Remove The Item</button>
+                <h6 class="count" id="springrollCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/pizza.jpg" alt="pizza">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pizza</h5>
+                    <h5 class="price" id="pizzaPrice"> ₹179 </h5>
+                </div>
+                <p>Savor a mouthwatering veg pizza loaded with a medley of fresh vegetables, delectable tomato sauce,
+                    and melted cheese, all on a perfectly baked crust.</p>
+                <button id="pizzaButton">Add To Cart</button>
+                <button id="pizzaRemoveButton" onclick="adjustCount('pizza', -1)">Remove The Item</button>
+                <h6 class="count" id="pizzaCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/steammomos.jpg" alt="steammomos">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Steam Momos</h5>
+                    <h5 class="price" id="steammomosPrice"> ₹99 </h5>
+                </div>
+                <p>Indulge in the exquisite simplicity of steam momos, delicate dumplings filled with a savory mixture,
+                    a delightful appetizer to savor</p>
+                <button id="steammomosButton">Add To Cart</button>
+                <button id="steammomosRemoveButton" onclick="adjustCount('steammomos', -1)">Remove The Item</button>
+                <h6 class="count" id="steammomosCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/frymomos.jpg" alt="frymomos">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Fry Momos</h5>
+                    <h5 class="price" id="frymomosPrice"> ₹119 </h5>
+                </div>
+                <p>Experience the irresistible crunch and burst of flavor in fried momos, where delicate dumplings are
+                    crisped to perfection, offering a delightful taste sensation. </p>
+                <button id="frymomosButton">Add To Cart</button>
+                <button id="frymomosRemoveButton" onclick="adjustCount('frymomos', -1)">Remove The Item</button>
+                <h6 class="count" id="frymomosCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/noodles.jpg" alt="noodles">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Noodles</h5>
+                    <h5 class="price" id="noodlesPrice"> ₹119 </h5>
+                </div>
+                <p>Enjoy a delectable plate of veg noodles, a savory stir-fry dish packed with fresh vegetables and
+                    flavorful sauces, creating a delightful and satisfying meal</p>
+                <button id="noodlesButton">Add To Cart</button>
+                <button id="noodlesRemoveButton" onclick="adjustCount('noodles', -1)">Remove The Item</button>
+                <h6 class="count" id="noodlesCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/pancake.jpg" alt="pancake">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Pan Cake</h5>
+                    <h5 class="price" id="pancakePrice"> ₹199 </h5>
+                </div>
+                <p>Pancakes are served with a variety of toppings, such as syrup, fresh fruit, or chocolate chips,
+                    making them a versatile and delicious morning treat enjoyed worldwide.</p>
+                <button id="pancakeButton">Add To Cart</button>
+                <button id="pancakeRemoveButton" onclick="adjustCount('pancake', -1)">Remove The Item</button>
+                <h6 class="count" id="pancakeCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/donut.jpg" alt="donut">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Donut</h5>
+                    <h5 class="price" id="donutPrice"> ₹79 </h5>
+                </div>
+                <p>Doughnuts are a kind of ring-shaped snack food popular in many countries, which are usually deep
+                    fried from flour doughs</p>
+                <button id="donutButton">Add To Cart</button>
+                <button id="donutRemoveButton" onclick="adjustCount('donut', -1)">Remove The Item</button>
+                <h6 class="count" id="donutCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/mojito.jpg" alt="mojito">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Mojito</h5>
+                    <h5 class="price" id="mojitoPrice"> ₹99 </h5>
+                </div>
+                <p>Quench your thirst with a refreshing mojito, a zesty concoction of lime, mint, sugar, and sparkling
+                    water - a perfect blend of citrusy and minty goodness.</p>
+                <button id="mojitoButton">Add To Cart</button>
+                <button id="mojitoRemoveButton" onclick="adjustCount('mojito', -1)">Remove The Item</button>
+                <h6 class="count" id="mojitoCount" hidden>0</h6>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/coffee.jpg" alt="coffee">
+            <div class="details">
+                <div class="details-sub">
+                    <h5>Coffee</h5>
+                    <h5 class="price" id="coffeePrice"> ₹99 </h5>
+                </div>
+                <p>Awaken your senses with a warm cup of coffee, a comforting brew that offers a perfect balance of rich
+                    aroma and satisfying taste. </p>
+                <button id="coffeeButton">Add To Cart</button>
+                <button id="coffeeRemoveButton" onclick="adjustCount('coffee', -1)">Remove The Item</button>
+                <h6 class="count" id="coffeeCount" hidden>0</h6>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- order page -->
+    <div id="order">
+        
+        <h1 class="title1">ORDER</h1>
+        <form action="order.php" method="post">
+            <input type="text" class="inp_box" name="name" placeholder="Name">
+            <input type="phone" class="inp_box" name="phone" placeholder="Phone">
+            <input type="email" class="inp_box" name="email" placeholder="Email">
+            <textarea type="text" class="inp_box text_area" name="address" placeholder="AdDress"></textarea>
+            <button class="btn2">Order Now</button>
+
+        </form>
+    </div>
+
+
+
+    </div>
+    <footer>
+        <div>
+            &copy;copyright 2023
+            <p>
+                <a href="https://www.linkedin.com/in/rakshitgupta9/" target="_blank">Designed by Rakshit</a>
+            </p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .qrcode-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .qrcode {
+            width: 320px;
+            height: 320px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qrcode-container">
+        <img class="qrcode" src="paytm.jpg" alt="Paytm QR Code" />
+        <p>Paytm</p>
+    </div>
+    <div class="qrcode-container">
+        <img class="qrcode" src="gpay.jpg" alt="Google Pay QR Code" />
+        <p>Google Pay</p>
+    </div>
+    <button onclick="paymentDone()">Done</button>
+
+    <script>
+        function paymentDone() {
+            window.location.href = "../order_confirm.html";
+        }
+    </script>
+</body>
+</html>

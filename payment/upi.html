@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter your UPI ID</h1>
+    <input type="text" id="upiId" placeholder="Enter UPI ID" />
+    <button onclick="startTimer()">Submit</button>
+    <div id="countdown"></div>
+
+    <script>
+        function startTimer() {
+            const upiId = document.getElementById("upiId").value;
+            if (upiId) {
+                let timeLeft = 5;
+                const countdownElement = document.getElementById("countdown");
+
+                // Display initial countdown value
+                countdownElement.textContent = `wait for ${timeLeft} seconds`;
+
+                // Update the countdown every second
+                const timerInterval = setInterval(function() {
+                    timeLeft--;
+                    countdownElement.textContent = `wait for ${timeLeft} seconds`;
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        window.location.href = "../order_confirm.html";
+                    }
+                }, 1000);
+            } else {
+                alert("Please enter your UPI ID.");
+            }
+        }
+    </script>
+</body>
+</html>

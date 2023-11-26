@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 200px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Main Page</h1>
+    <p>Please select an option:</p>
+
+    <button onclick="redirectToTableData()">Table Booking Details</button>
+    <button onclick="redirectToOrderData()">Order Details</button>
+    <button onclick="exitToIndex()">Exit</button>
+
+    <script>
+        // Redirect to table_data.php
+        function redirectToTableData() {
+            window.location.href = 'table_data.php';
+        }
+
+        // Redirect to order_data.php
+        function redirectToOrderData() {
+            window.location.href = 'order_data.php';
+        }
+
+        // Redirect to index.html
+        function exitToIndex() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

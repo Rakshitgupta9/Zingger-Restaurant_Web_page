@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Options</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Payment Option</h1>
+        <form class="options" id="paymentForm">
+            <label>
+                <input type="radio" name="payment" id="creditCard">Credit Card
+            </label>
+            <label>
+                <input type="radio" name="payment" id="upi">UPI
+            </label>
+            <label>
+                <input type="radio" name="payment" id="qrCode">QR Code
+            </label>
+            <label>
+                <input type="radio" name="payment" id="cashOnDelivery">Cash on Delivery
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    
+    
+    <script src="payment.js"></script>
+</body>
+</html>
