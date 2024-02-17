@@ -3,6 +3,7 @@
 ## Overview
 
 Welcome to Zinnger - a responsive and dynamic restaurant landing page designed and developed to enhance the digital presence of our restaurant. This project encompasses a range of features, from an interactive menu with online ordering to a seamless table booking system. Dive into the world of Zinnger and explore what we have to offer!
+
 Live View : https://rakshitgupta9.github.io/Zingger-Restaurant_Web_page/
 
 
@@ -13,8 +14,6 @@ Live View : https://rakshitgupta9.github.io/Zingger-Restaurant_Web_page/
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -67,17 +66,17 @@ Live View : https://rakshitgupta9.github.io/Zingger-Restaurant_Web_page/
 5. Learn more about us and provide feedback.
 
 
-##Screenshots
+## Screenshots
 
-#Home Page
+- Home Page<br><br>
 ![image](https://github.com/Rakshitgupta9/Zingger-Restaurant_Web_page/assets/95240061/f1b032c6-7ba0-47ef-ae97-6201f75dc66d)
 
-Menu
+- Menu<br><br>
 ![image](https://github.com/Rakshitgupta9/Zingger-Restaurant_Web_page/assets/95240061/f221b18a-82c2-42e9-997d-de7ebc8771df)
 
-Dark Mode
+- Dark Mode<br><br>
 ![image](https://github.com/Rakshitgupta9/Zingger-Restaurant_Web_page/assets/95240061/a49766ac-687c-45c7-9df4-c7778ff81244)
 
-Table Booking
+- Table Booking<br><br>
 ![image](https://github.com/Rakshitgupta9/Zingger-Restaurant_Web_page/assets/95240061/5c83eb80-7c2e-421b-b6dd-f7edb2e012e0)
 
