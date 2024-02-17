@@ -67,9 +67,9 @@ Live View : https://rakshitgupta9.github.io/Zingger-Restaurant_Web_page/
 5. Learn more about us and provide feedback.
 
 
-#Screenshots
+##Screenshots
 
-Home Page
+#Home Page
 ![image](https://github.com/Rakshitgupta9/Zingger-Restaurant_Web_page/assets/95240061/f1b032c6-7ba0-47ef-ae97-6201f75dc66d)
 
 Menu
